@@ -1,0 +1,109 @@
+@import url('./prism-rose-pine.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* todo: maybe use fontsource */
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	src: local('IBM Plex Sans'),
+		url('/fonts/IBMPlexSans-Text.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	src: local('IBM Plex Sans'),
+		url('/fonts/IBMPlexSans-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* dark by default */
+:root {
+	--f-high: #e0def4;
+	--f-low: #b0acc8;
+	
+	--b-high: #26233a;
+	--b-med: #1f1d2e;
+	--b-low: #191724;
+
+	--background: var(--b-low);
+	--accent: #c4a7e7;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--f-high: #575279;
+		--f-low: #6c678e;
+
+		--b-high: #fffcf8;
+		--b-med: #fffaf3;
+		--b-low: #faf4ed;
+
+		--accent: #d7827e;
+		--border: var(--b-low);
+		--background: var(--b-low);
+	}
+}
+
+.dark:root {
+	--f-high: #e0def4;
+	--f-low: #b0acc8;
+
+	--b-high: #26233a;
+	--b-med: #1f1d2e;
+	--b-low: #191724;
+
+	--accent: #c4a7e7;
+	--border: var(--b-low);
+	--background: var(--b-low);
+}
+
+.light:root {
+	--f-high: #575279;
+	--f-low: #6c678e;
+
+	--b-high: #fffcf8;
+	--b-med: #fffaf3;
+	--b-low: #faf4ed;
+
+	--accent: #d7827e;
+	--border: var(--b-low);
+	--background: var(--b-low);
+}
+
+:root {
+	color-scheme: light dark;
+}
+
+:not(pre)::selection {
+	background-color: var(--f-high);
+	color: var(--b-med);
+}
+
+* {
+	@apply underline-offset-2;
+}
+
+html,
+body {
+	@apply bg-background;
+}
+
+body {
+	@apply font-sans text-base text-f-high antialiased;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

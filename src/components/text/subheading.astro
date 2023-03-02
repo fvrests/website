@@ -1,0 +1,11 @@
+---
+export interface Props {
+	Element?: string;
+}
+
+const { Element = 'p' } = Astro.props;
+---
+
+<Element class="mb-2 text-base tracking-tight font-bold text-f-high">
+	<slot />
+</Element>

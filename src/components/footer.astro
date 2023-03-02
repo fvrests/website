@@ -1,0 +1,60 @@
+---
+import Link from '~/components/link.astro';
+import Wrapper from '~/components/wrapper.astro';
+import Subheading from './text/subheading.astro';
+
+let links = {
+	main: [
+		{ text: 'About', href: '/about' },
+		{ text: 'Notes', href: '/notes' },
+		{ text: 'RSS', href: '/rss.xml' },
+	],
+	social: [
+		{ text: 'GitHub', href: 'https://github.com/fvrests' },
+		{ text: 'Mastodon', href: 'https://mastodon.social/web/@fvrests' },
+		{ text: 'Twitter', href: 'https://twitter.com/fvrests' },
+	],
+};
+---
+
+<Wrapper>
+	<footer>
+		<nav class="section mb-md flex justify-between text-xs xs:text-sm">
+			<div class="flex flex-col">
+				<!-- todo: use id on component -->
+				<Subheading id="fvrests" Element="h2">Fvrests</Subheading>
+				<ul aria-labelledby="fvrests">
+					{
+						links.main.map(({ text, href }) => (
+							<li>
+								<Link href={href}>{text}</Link>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<div class="flex flex-col">
+				<!-- todo: use id on component -->
+				<Subheading id="social" Element="h2">Social</Subheading>
+				<ul aria-labelledby="social">
+					{
+						links.social.map(({ text, href }) => (
+							<li>
+								<Link href={href}>{text}</Link>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<div class="max-w-[130px] xs:max-w-[180px]">
+				<!-- todo: use id on component -->
+				<Subheading Element="h2">Site</Subheading>
+				<p>
+					Built by fvrests in 2023 with
+					<Link href="https://astro.build">Astro</Link>
+					&nbsp;&&nbsp;<Link href="https://tailwindcss.com">Tailwind</Link>
+				</p>
+			</div>
+		</nav>
+	</footer>
+</Wrapper>

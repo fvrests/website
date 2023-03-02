@@ -1,12 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '~/layouts/Layout.astro';
+import Wrapper from '~/components/wrapper.astro';
+import Heading from '~/components/text/heading.astro';
+import Subheading from '~/components/text/subheading.astro';
+import Paragraph from '~/components/text/paragraph.astro';
+import Link from '~/components/link.astro';
+import PostList from '~/components/post-list.astro';
 ---
 
-<Layout title="Home">
-	<main></main>
+<Layout title="fvrests" description="Home -- fvrests.">
+	<main>
+		<Wrapper>
+			<Heading Element="h1">Hi, I'm Lynn</Heading>
+			<Paragraph>
+				I'm exploring front-end development, accessibility & open source.
+			</Paragraph>
+			<Paragraph>
+				I'm searching for meaningful involvement in projects and communities
+				supporting social and ecological justice and sustainability.
+			</Paragraph>
+			<Paragraph>
+				<Link href="/about">Biography&nbsp;&nbsp;&Rarr;</Link>
+			</Paragraph>
+		</Wrapper>
+
+		<div class="h-lg"></div>
+
+		<Wrapper>
+			<Subheading Element="h2">Notes</Subheading>
+			<PostList />
+			<Paragraph>
+				<Link href="/notes">All notes&nbsp;&nbsp;&Rarr;</Link>
+			</Paragraph>
+		</Wrapper>
+	</main>
 </Layout>
-
-<style>
-
-</style>

@@ -1,0 +1,21 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Wrapper from '~/components/wrapper.astro';
+import Heading from '~/components/text/heading.astro';
+import PostList from '~/components/post-list.astro';
+import Paragraph from '~/components/text/paragraph.astro';
+import Link from '~/components/link.astro';
+---
+
+<Layout title="Notes | fvrests" description="Notes from fvrests.">
+	<main>
+		<Wrapper>
+			<Heading Element="h1">Notes</Heading>
+			<PostList />
+			<div class="h-sm"></div>
+			<Paragraph>
+				<Link href="/notes/tags">Browse by tag&nbsp;&nbsp;&Rarr;</Link>
+			</Paragraph>
+		</Wrapper>
+	</main>
+</Layout>
