@@ -18,18 +18,16 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title} | fvrests</title>
 		<meta name="description" content={description} />
 	</head>
-
-	<Header />
-
-	<div class="h-xl"></div>
-	<main class="flex-1">
-		<slot />
-	</main>
-	<div class="h-xl"></div>
-	<Footer />
-
-
+	<body class="flex min-h-screen flex-col">
+		<Header title={title} />
+		<div class="h-xl"></div>
+		<main class="relative flex-1">
+			<slot />
+		</main>
+		<div class="h-xl"></div>
+		<Footer />
+	</body>
 </html>

@@ -4,9 +4,10 @@ import type { HTMLAttributes } from 'astro/types';
 export interface Props extends HTMLAttributes<'a'> {
 	underline?: boolean;
 	title?: string;
+	color?: string;
 }
 
-const { underline = false, title = '', href } = Astro.props;
+const { underline = false, title = '', color = 'f-high', href } = Astro.props;
 let isExternal = href?.toString().startsWith('http') || null;
 ---
 
@@ -15,7 +16,9 @@ let isExternal = href?.toString().startsWith('http') || null;
 	rel={isExternal ? 'external' : undefined}
 	target={isExternal ? '_blank' : undefined}
 	title={title}
-	class={`italic inline-flex text-f-high ${
+	class={`italic inline-flex text-${color} ${
 		underline ? 'underline hover:no-underline' : 'no-underline hover:underline'
-	}`}><slot /></a
+	}`}
+>
+	<slot /></a
 >

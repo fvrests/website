@@ -8,30 +8,25 @@ import Link from '~/components/link.astro';
 import PostList from '~/components/post-list.astro';
 ---
 
-<Layout title="fvrests" description="Home -- fvrests.">
-	<main>
-		<Wrapper>
-			<Heading Element="h1">Hi, I'm Lynn</Heading>
-			<Paragraph>
-				I'm exploring front-end development, accessibility & open source.
-			</Paragraph>
-			<Paragraph>
-				I'm searching for meaningful involvement in projects and communities
-				supporting social and ecological justice and sustainability.
-			</Paragraph>
-			<Paragraph>
-				<Link href="/about">Biography&nbsp;&nbsp;&Rarr;</Link>
-			</Paragraph>
-		</Wrapper>
+<Layout title="home" description="a portfolio for fvrests.">
+	<Wrapper>
+		<Heading Element="h1">Hi, I'm Lynn</Heading>
+		<Paragraph>
+			I'm exploring front-end development, accessibility & open source.
+		</Paragraph>
+		<Paragraph>
+			I'm searching for meaningful involvement in projects and communities
+			supporting social and ecological justice and sustainability.
+		</Paragraph>
+
+		<div class="h-xs"></div>
+		<Link href="/about">Biography&nbsp;&nbsp;&Rarr;</Link>
 
 		<div class="h-lg"></div>
+		<Subheading Element="h2">Notes</Subheading>
+		<PostList max={3} />
 
-		<Wrapper>
-			<Subheading Element="h2">Notes</Subheading>
-			<PostList />
-			<Paragraph>
-				<Link href="/notes">All notes&nbsp;&nbsp;&Rarr;</Link>
-			</Paragraph>
-		</Wrapper>
-	</main>
+		<div class="h-xs"></div>
+		<Link href="/notes">All notes&nbsp;&nbsp;&Rarr;</Link>
+	</Wrapper>
 </Layout>

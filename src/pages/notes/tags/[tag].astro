@@ -23,24 +23,14 @@ export async function getStaticPaths() {
 	});
 }
 
-const { posts } = Astro.props;
 const { tag = '' } = Astro.params;
-
-console.log({ posts, tag });
 ---
 
-<Layout title={`${tag} | fvrests`} description={`Posts tagged with ${tag}`}>
+<Layout title={tag} description={`Posts tagged with ${tag}`}>
 	<Wrapper>
 		<main>
 			<Heading>#{tag}</Heading>
 			<PostList tag={tag} />
-			<div class="h-sm"></div>
-			<Link
-				href="/notes/tags"
-				class="text-sm font-bold uppercase tracking-wide hover:text-f-high hover:underline"
-			>
-				&Larr;&nbsp;&nbsp;Back to tags
-			</Link>
 		</main>
 	</Wrapper>
 </Layout>
