@@ -10,7 +10,7 @@ type Props = {
 	frontmatter: Post;
 };
 
-const { title, publishDate, description, cover, coverAlt } =
+const { title, publishDate, description, cover, coverAlt, tags } =
 	Astro.props.frontmatter;
 ---
 
@@ -18,13 +18,25 @@ const { title, publishDate, description, cover, coverAlt } =
 	<main>
 		<Wrapper>
 			<Heading Element="h1">{title}</Heading>
-			<div class="mt-1 text-sm capitalize">
+			<div class="text-sm capitalize">
 				<span>note</span>
 				<span class="px-1">|</span>
 				<span class="tabular-nums">
 					{publishDate}
 				</span>
 			</div>
+			<div class="h-xs"></div>
+			<ul class="flex flex-wrap gap-2 text-sm">
+				{
+					tags.map((tag) => (
+						<li class="shrink-0">
+							<Link href={`/notes/tags/${tag}`} color="accent" underline>
+								#{tag}
+							</Link>
+						</li>
+					))
+				}
+			</ul>
 			{
 				cover && (
 					<>

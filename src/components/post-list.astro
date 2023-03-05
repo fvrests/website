@@ -1,13 +1,14 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import Subheading from '~/components/text/subheading.astro';
 import Link from '~/components/link.astro';
-import Layout from '~/layouts/Layout.astro';
 
+// todo: add max number of posts
 interface Props {
 	tag?: string;
+	max?: number;
 }
-const { tag } = Astro.props;
+
+let { tag, max } = Astro.props;
 
 // get all unique tags
 const allPosts = await getCollection('posts');
@@ -17,18 +18,22 @@ allPosts.map((post) => {
 });
 
 const sortPosts = (posts: CollectionEntry<'posts'>[]) =>
-	posts.sort((a, b) => b.data.publishDate - a.data.publishDate);
+	posts.sort(
+		(a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
+	);
 
 // get posts for current tag
 const posts: CollectionEntry<'posts'>[] = tag
 	? sortPosts(allPosts.filter(({ data }) => data.tags.includes(tag)))
 	: sortPosts(allPosts);
+
+if (!max) max = posts.length + 1;
 ---
 
 <div>
 	<ul role="list" class="mb-4">
 		{
-			posts.map((post) => (
+			posts.slice(0, max).map((post) => (
 				<li class="mb-1 grid max-w-fit">
 					<Link href={`/notes/${post.slug}`}>
 						<div class="flex items-end gap-12">

@@ -3,7 +3,7 @@ title: Rosé Pine Images
 publishDate: 2021-02-01
 cover: /rose-pine-images/rpi.jpg
 coverAlt: Screenshot of Rosé Pine images website in a browser window
-tags: ["projects"]
+tags: ["projects", "rose-pine"]
 ---
 
 Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool from [Vercel's Open Graph Image as a Service](https://github.com/vercel/og-image) in an effort to help foster a common design language among Rosé Pine's diverse projects and ease the process of implementing new themes for creators.
