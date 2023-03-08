@@ -5,8 +5,13 @@ import Wrapper from '~/components/wrapper.astro';
 
 const { title } = Astro.props;
 let path = Astro.url.pathname;
+if (path.charAt(path.length - 1) == '/') {
+	path = path.slice(0, -1);
+}
 let subpaths = path.split('/').slice(0, -1);
 let isHome = path == '/';
+
+console.log({ subpaths });
 
 let subpathList = subpaths.reduce(
 	(acc, subpath, i) => [
