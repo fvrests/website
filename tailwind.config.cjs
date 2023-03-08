@@ -13,9 +13,9 @@ module.exports = {
 				xl: '6rem',
 			},
 			fontFamily: {
-				sans: ['IBM Plex Sans', 'Arial', ...fontFamily.sans],
-				serif: ['IBM Plex Serif', ...fontFamily.serif],
-				mono: ['IBM Plex Mono', ...fontFamily.mono],
+				sans: ['Arial', ...fontFamily.sans],
+				serif: ['Georgia', ...fontFamily.serif],
+				mono: ['Menlo', ...fontFamily.mono],
 			},
 			screens: {
 				xs: '400px',

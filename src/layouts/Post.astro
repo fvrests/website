@@ -10,7 +10,7 @@ type Props = {
 	frontmatter: Post;
 };
 
-const { title, publishDate, description, cover, coverAlt, tags } =
+const { title, pubDate, description, cover, coverAlt, tags } =
 	Astro.props.frontmatter;
 ---
 
@@ -18,11 +18,11 @@ const { title, publishDate, description, cover, coverAlt, tags } =
 	<main>
 		<Wrapper>
 			<Heading Element="h1">{title}</Heading>
-			<div class="text-sm capitalize">
+			<div class="flex items-center text-sm capitalize">
 				<span>note</span>
-				<span class="px-1">|</span>
+				<div class="mb-0.5 px-2">|</div>
 				<span class="tabular-nums">
-					{publishDate}
+					{pubDate}
 				</span>
 			</div>
 			<div class="h-xs"></div>
@@ -56,12 +56,7 @@ const { title, publishDate, description, cover, coverAlt, tags } =
 				<slot />
 			</Prose>
 			<div class="h-xl"></div>
-			<Link
-				href="/notes"
-				class="backlink text-sm font-bold uppercase tracking-wide hover:text-f-high hover:underline"
-			>
-				&Larr;&nbsp;&nbsp;Back to notes
-			</Link>
+			<Link href="/notes">&Larr;&nbsp;&nbsp;Back to notes</Link>
 		</Wrapper>
 	</main>
 </Layout>

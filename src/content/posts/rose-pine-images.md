@@ -1,9 +1,9 @@
 ---
 title: Rosé Pine Images
-publishDate: 2021-02-01
+pubDate: 2021-02-01
 cover: /rose-pine-images/rpi.jpg
 coverAlt: Screenshot of Rosé Pine images website in a browser window
-tags: ["projects", "rose-pine"]
+tags: ['projects', 'rose-pine']
 ---
 
 Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool from [Vercel's Open Graph Image as a Service](https://github.com/vercel/og-image) in an effort to help foster a common design language among Rosé Pine's diverse projects and ease the process of implementing new themes for creators.
@@ -13,7 +13,6 @@ For me, this project was an exercise in adapting a pre-existing codebase to fit 
 ## Links
 
 - [Live Site](https://rose-pine-images.vercel.app)
-
 - [GitHub](https://github.com/fvrests/rose-pine-images)
 
 ## Skills & Stack
@@ -28,6 +27,8 @@ Customization options include a selection of three basic themes, as well as an i
 ### Rosé Pine
 
 <img src="/rose-pine-images/rpi-preview-base.jpg" alt="Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background." width="350"/>
+
+<!-- ![Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background.](/rose-pine-images/rpi-preview-base.jpg) -->
 
 ### Rosé Pine Moon
 

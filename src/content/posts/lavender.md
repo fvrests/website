@@ -1,9 +1,9 @@
 ---
 title: Lavender
-publishDate: 2020-08-19
+pubDate: 2020-08-19
 cover: /lavender/lavender.jpg
 coverAlt: Lavender app in a browser window on a dark background with lavender plants, moon and stars
-tags: ["projects"]
+tags: ['projects']
 ---
 
 Lavender is a minimalist Chrome new tab extension born of a need for respite from the distractions inherent to the modern web. Its purpose is to provide a new tab alternative that limits decision fatigue for the user while prioritizing a few simple utilities. As my first solo development project, Lavender has also served as a playground for me to grow my code and project management skills.

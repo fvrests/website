@@ -7,7 +7,6 @@ const { title } = Astro.props;
 let path = Astro.url.pathname;
 let subpaths = path.split('/').slice(0, -1);
 let isHome = path == '/';
-console.log({ subpaths, path });
 
 let subpathList = subpaths.reduce(
 	(acc, subpath, i) => [
@@ -19,11 +18,9 @@ let subpathList = subpaths.reduce(
 	],
 	[] as { text: string; link: string }[]
 );
-
-console.log({ title, subpathList });
 ---
 
-<header class="sticky top-0 mt-xl bg-background py-4">
+<header class="sticky top-0 z-20 mt-xl bg-background py-4">
 	<nav>
 		<Wrapper>
 			<ul class="inline-grid grid-flow-col items-start space-x-2">

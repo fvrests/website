@@ -3,7 +3,6 @@ module.exports = {
 		// tailwindcss: {},
 		// autoprefixer: {}
 		require('autoprefixer'),
-		require('tailwindcss')
-	]
+		require('tailwindcss'),
+	],
 };
-

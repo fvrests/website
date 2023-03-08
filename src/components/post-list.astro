@@ -2,7 +2,6 @@
 import { CollectionEntry, getCollection } from 'astro:content';
 import Link from '~/components/link.astro';
 
-// todo: add max number of posts
 interface Props {
 	tag?: string;
 	max?: number;
@@ -18,9 +17,7 @@ allPosts.map((post) => {
 });
 
 const sortPosts = (posts: CollectionEntry<'posts'>[]) =>
-	posts.sort(
-		(a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
-	);
+	posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 // get posts for current tag
 const posts: CollectionEntry<'posts'>[] = tag
@@ -37,8 +34,8 @@ if (!max) max = posts.length + 1;
 				<li class="mb-1 grid max-w-fit">
 					<Link href={`/notes/${post.slug}`}>
 						<div class="flex items-end gap-12">
-							<span class="font-mono opacity-80">
-								{post.data.publishDate.toLocaleDateString(undefined, {
+							<span class="font-mono text-f-low">
+								{post.data.pubDate.toLocaleDateString(undefined, {
 									timeZone: 'UTC',
 									month: 'short',
 									year: 'numeric',

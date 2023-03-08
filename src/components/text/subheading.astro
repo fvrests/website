@@ -1,11 +1,12 @@
 ---
 export interface Props {
 	Element?: string;
+	id?: string;
 }
 
-const { Element = 'p' } = Astro.props;
+const { Element = 'p', id = undefined } = Astro.props;
 ---
 
-<Element class="mb-2 text-base tracking-tight font-bold text-f-high">
+<Element id={id} class="mb-2 text-base tracking-tight font-bold text-f-high">
 	<slot />
 </Element>

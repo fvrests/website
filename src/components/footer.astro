@@ -7,18 +7,22 @@ let links = {
 	main: [
 		{ text: 'About', href: '/about' },
 		{ text: 'Notes', href: '/notes' },
-		{ text: 'RSS', href: '/rss.xml' },
+		{ text: 'Tags', href: '/notes/tags' },
+		{
+			text: 'RSS',
+			href: import.meta.env.DEV ? `/rss.xml?${Date.now()}` : '/rss.xml',
+		},
 	],
 	social: [
 		{ text: 'GitHub', href: 'https://github.com/fvrests' },
 		{ text: 'Mastodon', href: 'https://mastodon.social/web/@fvrests' },
 		{ text: 'Twitter', href: 'https://twitter.com/fvrests' },
+		{ text: 'Literal', href: 'https://literal.club/oat/' },
 	],
 };
 ---
 
 <Wrapper>
-	<!-- todo: make sure footer is pushed to bottom (set min page height)-->
 	<footer>
 		<nav class="section mb-md flex h-28 justify-between text-xs xs:text-sm">
 			<div class="flex flex-col">
