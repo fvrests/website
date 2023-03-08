@@ -13,7 +13,6 @@ This project's design was loosely inspired by [Lagom](http://lagom.io).
 ## Links
 
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/lavender-new-tab/ffobepdbanoiodmfimpmanafepclokbc)
-
 - [GitHub](https://github.com/fvrests/lavender)
 
 ## Skills & Stack
