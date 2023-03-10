@@ -16,8 +16,7 @@ export async function get(context) {
 			.use(remarkParse)
 			.use(remarkRehype, { allowDangerousHtml: true })
 			.use(rehypeRaw)
-			.use(rehypeUrls, (url, node) => {
-				console.log({ url }, { node });
+			.use(rehypeUrls, (url) => {
 				const baseUrl = import.meta.env.DEV
 					? 'http://localhost:3000'
 					: context.site.origin;

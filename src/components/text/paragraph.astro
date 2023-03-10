@@ -6,4 +6,6 @@ export interface Props {
 const { Element = 'p' } = Astro.props;
 ---
 
-<Element class="mb-4 font-medium text-f-low"><slot /></Element>
+<Element class="mb-4 text-f-low">
+	<slot />
+</Element>

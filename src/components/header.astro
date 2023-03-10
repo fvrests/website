@@ -11,8 +11,6 @@ if (path.charAt(path.length - 1) == '/') {
 let subpaths = path.split('/').slice(0, -1);
 let isHome = path == '/';
 
-console.log({ subpaths });
-
 let subpathList = subpaths.reduce(
 	(acc, subpath, i) => [
 		...acc,
@@ -28,7 +26,7 @@ let subpathList = subpaths.reduce(
 <header class="sticky top-0 z-20 mt-xl bg-background py-4">
 	<nav>
 		<Wrapper>
-			<ul class="inline-grid grid-flow-col items-start space-x-2">
+			<ul class="inline-grid grid-flow-col items-center space-x-2">
 				{
 					!isHome &&
 						subpathList.map((subpath) => (
@@ -43,7 +41,9 @@ let subpathList = subpaths.reduce(
 						))
 				}
 				<li>
-					<Link href="#">{title}</Link>
+					<Link href="#">
+						{title}
+					</Link>
 				</li>
 			</ul>
 		</Wrapper>
