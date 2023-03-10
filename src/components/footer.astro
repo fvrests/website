@@ -24,11 +24,11 @@ let links = {
 
 <Wrapper>
 	<footer>
-		<nav class="section mb-md flex h-28 justify-between text-xs xs:text-sm">
+		<!--  h-28 -->
+		<nav class="mb-md flex justify-between text-sm">
 			<div class="flex flex-col">
-				<!-- todo: use id on component -->
 				<Subheading id="fvrests" Element="h2">Fvrests</Subheading>
-				<ul aria-labelledby="fvrests">
+				<ul aria-labelledby="fvrests" class="space-y-0.5">
 					{
 						links.main.map(({ text, href }) => (
 							<li>
@@ -39,9 +39,8 @@ let links = {
 				</ul>
 			</div>
 			<div class="flex flex-col">
-				<!-- todo: use id on component -->
 				<Subheading id="social" Element="h2">Social</Subheading>
-				<ul aria-labelledby="social">
+				<ul aria-labelledby="social" class="space-y-0.5">
 					{
 						links.social.map(({ text, href }) => (
 							<li>
@@ -51,13 +50,15 @@ let links = {
 					}
 				</ul>
 			</div>
-			<div class="max-w-[130px] xs:max-w-[180px]">
-				<!-- todo: use id on component -->
+			<div class="max-w-[96px] xs:max-w-[160px]">
 				<Subheading Element="h2">Site</Subheading>
 				<p>
 					Built by fvrests in 2023 with
-					<Link href="https://astro.build">Astro</Link>
-					&nbsp;&&nbsp;<Link href="https://tailwindcss.com">Tailwind</Link>
+					<Link href="https://astro.build">Astro</Link> & <Link
+						href="https://tailwindcss.com"
+					>
+						Tailwind
+					</Link>
 				</p>
 			</div>
 		</nav>
