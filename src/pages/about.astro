@@ -20,7 +20,7 @@ import Scorpio from '~/components/icons/scorpio.astro';
 		<img
 			src="/bio.png"
 			alt="Lynn - a grayscale photo of a long-haired woman in a black crewneck. In the background is a birch cart shelving unit with a rubber plant on top."
-			class="mb-md w-36 rounded-xl sm:relative sm:top-1 sm:float-left sm:mr-12 sm:mb-4"
+			class="mb-md h-48 w-36 rounded-xl sm:relative sm:top-1 sm:float-left sm:mr-12 sm:mb-4"
 		/>
 		<Heading Element="h1">About the developer</Heading>
 		<Paragraph>
@@ -67,20 +67,22 @@ import Scorpio from '~/components/icons/scorpio.astro';
 			</div>
 			<div>
 				<Subheading Element="h3">Signs</Subheading>
-				<ul>
-					<li class="flex items-center space-x-2">
-						<Cancer size={16} />
-						<span>Sun in Cancer</span>
-					</li>
-					<li class="flex items-center space-x-2">
-						<Leo size={16} />
-						<span>Moon in Leo</span>
-					</li>
-					<li class="flex items-center space-x-2">
-						<Scorpio size={16} />
-						<span>Scorpio Rising</span>
-					</li>
-				</ul>
+				<Paragraph Element="div">
+					<ul>
+						<li class="flex items-center space-x-2">
+							<Cancer size={16} />
+							<span>Sun in Cancer</span>
+						</li>
+						<li class="flex items-center space-x-2">
+							<Leo size={16} />
+							<span>Moon in Leo</span>
+						</li>
+						<li class="flex items-center space-x-2">
+							<Scorpio size={16} />
+							<span>Scorpio Rising</span>
+						</li>
+					</ul>
+				</Paragraph>
 			</div>
 			<div>
 				<Subheading Element="h3">Reading</Subheading>
