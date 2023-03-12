@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+	experimental: { assets: true },
 	integrations: [tailwind({ config: { applyBaseStyles: false } })],
 	markdown: { syntaxHighlight: 'prism' },
 	site: 'https://fvrests.dev',

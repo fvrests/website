@@ -1,8 +1,9 @@
 ---
 title: Rosé Pine
 pubDate: 2019-12-14
-cover: /rose-pine/rp-base.jpg
-coverAlt: Visual Studio Code using Rosé Pine color theme atop a dark background with colorful tropical plants. Rosé Pine incorporates bright white, ochre gold, pine green, rosy pink, lavender and seafoam text on a dark indigo background.
+cover:
+  src: /rose-pine/rp-base.jpg
+  alt: Visual Studio Code using Rosé Pine color theme atop a dark background with colorful tropical plants. Rosé Pine incorporates bright white, ochre gold, pine green, rosy pink, lavender and seafoam text on a dark indigo background.
 tags: ['projects', 'rose-pine']
 ---
 
