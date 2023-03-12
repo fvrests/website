@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '~/layouts/Layout.astro';
 import Wrapper from '~/components/wrapper.astro';
 import Heading from '~/components/text/heading.astro';
 import Paragraph from '~/components/text/paragraph.astro';
 import Subheading from '~/components/text/subheading.astro';
 import Link from '~/components/link.astro';
+import bio from '~/assets/bio.png';
 
 import Cancer from '~/components/icons/cancer.astro';
 import Leo from '~/components/icons/leo.astro';
@@ -16,11 +18,10 @@ import Scorpio from '~/components/icons/scorpio.astro';
 	description="fvrests is a science graduate and developer who is interested in building resources for a better community and world."
 >
 	<Wrapper>
-		<!--todo: compress images-->
-		<img
-			src="/bio.png"
+		<Image
+			src={bio}
 			alt="Lynn - a grayscale photo of a long-haired woman in a black crewneck. In the background is a birch cart shelving unit with a rubber plant on top."
-			class="mb-md h-48 w-36 rounded-xl sm:relative sm:top-1 sm:float-left sm:mr-12 sm:mb-4"
+			class="mb-md w-36 rounded-xl sm:relative sm:top-1 sm:float-left sm:mr-12 sm:mb-4"
 		/>
 		<Heading Element="h1">About the developer</Heading>
 		<Paragraph>
