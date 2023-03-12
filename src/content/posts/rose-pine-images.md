@@ -1,8 +1,9 @@
 ---
 title: Rosé Pine Images
 pubDate: 2021-02-01
-cover: /rose-pine-images/rpi.jpg
-coverAlt: Screenshot of Rosé Pine images website in a browser window
+cover:
+  src: /rose-pine-images/rpi.jpg
+  alt: Screenshot of Rosé Pine images website in a browser window
 tags: ['projects', 'rose-pine']
 ---
 

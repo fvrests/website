@@ -8,8 +8,7 @@ const post = z.object({
 	description: z.string().optional(),
 	pubDate: z.date().transform((val) => new Date(val)),
 	tags: z.array(z.string()),
-	cover: z.string().optional(),
-	coverAlt: z.string().optional(),
+	cover: z.object({ src: z.string(), alt: z.string() }).optional(),
 	links: z.array(z.object({ name: z.string(), url: z.string() })).optional(),
 });
 

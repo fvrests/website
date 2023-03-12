@@ -10,8 +10,7 @@ type Props = {
 	frontmatter: Post;
 };
 
-const { title, pubDate, description, cover, coverAlt, tags } =
-	Astro.props.frontmatter;
+const { title, pubDate, description, cover, tags } = Astro.props.frontmatter;
 ---
 
 <Layout {title} {description}>
@@ -44,8 +43,8 @@ const { title, pubDate, description, cover, coverAlt, tags } =
 						<div class="flex max-h-[600px] w-full items-center justify-center overflow-hidden rounded-xl">
 							<img
 								class="h-auto w-full rounded-xl"
-								src={cover}
-								alt={coverAlt}
+								src={cover.src}
+								alt={cover.alt}
 							/>
 						</div>
 					</>
