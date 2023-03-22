@@ -23,29 +23,39 @@ let subpathList = subpaths.reduce(
 );
 ---
 
-<header class="sticky top-0 z-20 mt-xl bg-background py-4">
-	<nav>
-		<Wrapper>
-			<ul class="inline-grid grid-flow-col items-center space-x-2">
-				{
-					!isHome &&
-						subpathList.map((subpath) => (
-							<>
-								<li>
-									<Link href={subpath.link} color="f-low">
-										{subpath.text}
-									</Link>
-								</li>
-								<span>/</span>
-							</>
-						))
-				}
-				<li>
-					<Link href="#">
-						{title}
-					</Link>
-				</li>
-			</ul>
-		</Wrapper>
+<header class="sticky top-0 z-20 mt-xl bg-background py-2">
+	<nav class="relative">
+		<div
+			class="absolute left-0 -top-4 h-14 w-8 bg-gradient-to-r from-background"
+		>
+		</div>
+		<div
+			class="absolute right-0 -top-4 h-14 w-8 bg-gradient-to-l from-background"
+		>
+		</div>
+		<div class="overflow-x-auto py-2">
+			<Wrapper>
+				<ul class="inline-grid grid-flow-col items-center space-x-2">
+					{
+						!isHome &&
+							subpathList.map((subpath) => (
+								<>
+									<li>
+										<Link href={subpath.link} scheme="f-low">
+											{subpath.text}
+										</Link>
+									</li>
+									<span>/</span>
+								</>
+							))
+					}
+					<li class="shrink-0 whitespace-nowrap pr-8">
+						<Link href="#">
+							{title}
+						</Link>
+					</li>
+				</ul>
+			</Wrapper>
+		</div>
 	</nav>
 </header>
