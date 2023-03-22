@@ -24,7 +24,7 @@ const sortedTags = sortTags([...allTags]);
 			{
 				sortedTags.map((tag: string) => (
 					<li class="mb-1">
-						<Link color="accent" underline href={`/notes/tags/${tag}`}>
+						<Link scheme="accent" underline href={`/notes/tags/${tag}`}>
 							#{tag}
 						</Link>
 					</li>

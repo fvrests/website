@@ -16,7 +16,7 @@ This project's design was loosely inspired by [Lagom](http://lagom.io).
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/lavender-new-tab/ffobepdbanoiodmfimpmanafepclokbc)
 - [GitHub](https://github.com/fvrests/lavender)
 
-## Skills & Stack
+## Utilities
 
 - [Vue 3](https://vuejs.org) framework & composition API
 - State management with [Vuex](https://vuex.vuejs.org)

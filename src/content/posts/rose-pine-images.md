@@ -7,7 +7,7 @@ cover:
 tags: ['projects', 'rose-pine']
 ---
 
-Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool from [Vercel's Open Graph Image as a Service](https://github.com/vercel/og-image) in an effort to help foster a common design language among Rosé Pine's diverse projects and ease the process of implementing new themes for creators.
+Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool from Vercel's [Open Graph Image as a Service](https://github.com/vercel/og-image) in an effort to help foster a common design language among Rosé Pine's diverse projects and ease the process of implementing new themes for creators.
 
 For me, this project was an exercise in adapting a pre-existing codebase to fit a new use case, reading unfamiliar code, and adding my own customizations without compromising existing functionality.
 
@@ -16,10 +16,10 @@ For me, this project was an exercise in adapting a pre-existing codebase to fit 
 - [Live Site](https://rose-pine-images.vercel.app)
 - [GitHub](https://github.com/fvrests/rose-pine-images)
 
-## Skills & Stack
+## Utilities
 
-- Hosting a website with [Vercel](https://vercel.com/)
-- Forking & repurposing a remote codebase
+- Site hosted with [Vercel](https://vercel.com/)
+- Spinners from Tobias Ahlin's [Spinkit](https://tobiasahlin.com/spinkit/)
 
 ## Templates
 
@@ -28,8 +28,6 @@ Customization options include a selection of three basic themes, as well as an i
 ### Rosé Pine
 
 <img src="/rose-pine-images/rpi-preview-base.jpg" alt="Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background." width="350"/>
-
-<!-- ![Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background.](/rose-pine-images/rpi-preview-base.jpg) -->
 
 ### Rosé Pine Moon
 
