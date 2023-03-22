@@ -7,7 +7,7 @@ interface Props {
 	max?: number;
 }
 
-let { tag, max } = Astro.props;
+const { tag, max } = Astro.props;
 
 // get all unique tags
 const allPosts = await getCollection('posts');

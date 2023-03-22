@@ -10,53 +10,76 @@ type Props = {
 	frontmatter: Post;
 };
 
+// info: https://docs.astro.build/en/guides/imports/#node-builtins
+import fs from 'node:fs';
+import process from 'node:process';
+
+function formatDate(date: Date) {
+	return date.toLocaleString(undefined, {
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric',
+	});
+}
+
+function getLastModified(filename: string) {
+	const stat = fs.statSync(`${process.cwd()}/src/content/posts/${filename}.md`);
+	const { mtime: modified } = stat;
+	return modified;
+}
+
+const { slug } = Astro.params;
 const { title, pubDate, description, cover, coverAlt, tags } =
 	Astro.props.frontmatter;
 ---
 
 <Layout {title} {description}>
-	<main>
-		<Wrapper>
-			<Heading Element="h1">{title}</Heading>
-			<div class="flex items-center text-sm capitalize">
-				<span>note</span>
-				<div class="mb-0.5 px-2">|</div>
-				<span class="tabular-nums">
-					{pubDate}
-				</span>
+	<Wrapper>
+		<Heading Element="h1">{title}</Heading>
+		<div class="flex items-center text-sm font-bold">
+			<p
+				class="inline-flex pr-3 italic text-f-high after:-mt-px after:pl-3 after:text-f-low after:content-['|']"
+			>
+				Note
+			</p>
+
+			<div class="flex flex-wrap items-center gap-1.5">
+				<p class="tabular-nums text-f-high">{formatDate(pubDate)}</p>
+
+				<p class="tabular-nums">
+					(modified {formatDate(getLastModified(slug))})
+				</p>
 			</div>
-			<div class="h-xs"></div>
-			<ul class="flex flex-wrap gap-2 text-sm">
-				{
-					tags.map((tag) => (
-						<li class="shrink-0">
-							<Link href={`/notes/tags/${tag}`} color="accent" underline>
-								#{tag}
-							</Link>
-						</li>
-					))
-				}
-			</ul>
+		</div>
+
+		<div class="h-xs"></div>
+
+		<ul class="flex flex-wrap gap-2 text-sm">
 			{
-				cover && (
-					<>
-						<div class="h-md" />
-						<div class="flex max-h-[600px] w-full items-center justify-center overflow-hidden rounded-xl">
-							<img
-								class="h-auto w-full rounded-xl"
-								src={cover}
-								alt={coverAlt}
-							/>
-						</div>
-					</>
-				)
+				tags.map((tag) => (
+					<li class="shrink-0">
+						<Link href={`/notes/tags/${tag}`} color="accent" underline>
+							#{tag}
+						</Link>
+					</li>
+				))
 			}
-			<div class="h-md"></div>
-			<Prose>
-				<slot />
-			</Prose>
-			<div class="h-xl"></div>
-			<Link href="/notes">&Larr;&nbsp;&nbsp;Back to notes</Link>
-		</Wrapper>
-	</main>
+		</ul>
+		{
+			cover && (
+				<>
+					<div class="h-lg" />
+					<div class="flex max-h-[600px] w-full items-center justify-center overflow-hidden rounded-xl">
+						<img class="h-auto w-full rounded-xl" src={cover} alt={coverAlt} />
+					</div>
+				</>
+			)
+		}
+		<div class="h-lg"></div>
+		<Prose>
+			<slot />
+		</Prose>
+		<div class="h-xl"></div>
+		<Link href="/notes">&Larr;&nbsp;&nbsp;Back to notes</Link>
+	</Wrapper>
 </Layout>
