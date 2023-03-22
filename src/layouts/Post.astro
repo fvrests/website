@@ -38,7 +38,7 @@ const { title, pubDate, description, cover, coverAlt, tags } =
 		<Heading Element="h1">{title}</Heading>
 		<div class="flex items-center text-sm font-bold">
 			<p
-				class="inline-flex pr-3 italic text-f-high after:-mt-px after:pl-3 after:text-f-low after:content-['|']"
+				class="inline-flex pr-2 italic text-f-high after:-mt-px after:pl-2 after:text-f-low after:content-['|']"
 			>
 				Note
 			</p>
@@ -58,7 +58,7 @@ const { title, pubDate, description, cover, coverAlt, tags } =
 			{
 				tags.map((tag) => (
 					<li class="shrink-0">
-						<Link href={`/notes/tags/${tag}`} color="accent" underline>
+						<Link href={`/notes/tags/${tag}`} scheme="accent" underline>
 							#{tag}
 						</Link>
 					</li>
