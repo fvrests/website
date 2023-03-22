@@ -14,6 +14,7 @@
 		"@astrojs/tailwind": "^3.0.1",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.9",
+		"@types/node": "^18.15.5",
 		"astro": "^2.0.16",
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
