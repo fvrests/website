@@ -2,7 +2,7 @@
 title: Lavender
 pubDate: 2020-08-19
 cover:
-  src: /lavender/lavender.jpg
+  src: ../assets/lavender/cover.jpg
   alt: Lavender app in a browser window on a dark background with lavender plants, moon and stars
 tags: ['projects']
 ---
