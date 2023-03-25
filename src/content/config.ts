@@ -10,9 +10,7 @@ const post = z.object({
 	tags: z.array(z.string()),
 	cover: z
 		.object({
-			src: image().refine((img) => img.src.includes('/assets/'), {
-				message: 'Cover.src must be relative (start with "../assets")',
-			}),
+			src: image(),
 			alt: z.string(),
 		})
 		.optional(),
