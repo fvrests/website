@@ -4,15 +4,18 @@ import Wrapper from '~/components/wrapper.astro';
 import Prose from '~/components/prose.astro';
 import Link from '~/components/link.astro';
 import Heading from '~/components/text/heading.astro';
+import { Image } from 'astro:assets';
 import type { Post } from '~/content/config';
+// info: https://docs.astro.build/en/guides/imports/#node-builtins
+import fs from 'node:fs';
+import process from 'node:process';
 
 type Props = {
 	frontmatter: Post;
 };
 
-// info: https://docs.astro.build/en/guides/imports/#node-builtins
-import fs from 'node:fs';
-import process from 'node:process';
+const { title, pubDate, description, cover, tags } = Astro.props.frontmatter;
+const { slug } = Astro.params;
 
 function formatDate(date: Date) {
 	return date.toLocaleString(undefined, {
@@ -27,10 +30,6 @@ function getLastModified(filename: string) {
 	const { mtime: modified } = stat;
 	return modified;
 }
-
-const { slug } = Astro.params;
-const { title, pubDate, description, cover, coverAlt, tags } =
-	Astro.props.frontmatter;
 ---
 
 <Layout {title} {description}>
@@ -66,11 +65,15 @@ const { title, pubDate, description, cover, coverAlt, tags } =
 			}
 		</ul>
 		{
-			cover && (
+			cover && cover.src && (
 				<>
 					<div class="h-lg" />
 					<div class="flex max-h-[600px] w-full items-center justify-center overflow-hidden rounded-xl">
-						<img class="h-auto w-full rounded-xl" src={cover} alt={coverAlt} />
+						<Image
+							class="h-auto w-full rounded-xl"
+							src={cover.src}
+							alt={cover.alt}
+						/>
 					</div>
 				</>
 			)

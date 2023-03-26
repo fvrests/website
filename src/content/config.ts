@@ -1,15 +1,19 @@
 // note: https://github.com/colinhacks/zod
 
 // 1. Import utilities from `astro:content`
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, image } from 'astro:content';
 
 const post = z.object({
 	title: z.string(),
 	description: z.string().optional(),
 	pubDate: z.date().transform((val) => new Date(val)),
 	tags: z.array(z.string()),
-	cover: z.string().optional(),
-	coverAlt: z.string().optional(),
+	cover: z
+		.object({
+			src: image(),
+			alt: z.string(),
+		})
+		.optional(),
 	links: z.array(z.object({ name: z.string(), url: z.string() })).optional(),
 });
 
