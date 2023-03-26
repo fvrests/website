@@ -2,7 +2,7 @@
 title: Rosé Pine Images
 pubDate: 2021-02-01
 cover:
-  src: ../assets/rose-pine-images/cover.jpg
+  src: ~/assets/rose-pine-images/cover.jpg
   alt: Screenshot of Rosé Pine images website in a browser window
 tags: ['projects', 'rose-pine']
 ---

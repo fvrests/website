@@ -2,7 +2,7 @@
 title: Rosé Pine
 pubDate: 2019-12-14
 cover:
-  src: ../assets/rose-pine/cover.jpg
+  src: ~/assets/rose-pine/cover.jpg
   alt: Visual Studio Code using Rosé Pine color theme atop a dark background with colorful tropical plants. Rosé Pine incorporates bright white, ochre gold, pine green, rosy pink, lavender and seafoam text on a dark indigo background.
 tags: ['projects', 'rose-pine']
 ---
@@ -32,34 +32,49 @@ The project is also intended as an encouraging space for contributors to learn a
 > Selected contributions
 
 <figure>
-<img src="/rose-pine/rp-vscode-base.jpg" alt="Rosé Pine for VSCode" />
-<figcaption>Rosé Pine for Visual Studio Code — <a href="https://github.com/rose-pine/vscode">source</a></figcaption> 
+
+![Rosé Pine for Visual Studio Code](../../../public/rose-pine/rp-vscode-base.jpg)
+
+<figcaption>Rosé Pine for Visual Studio Code — <a href="https://github.com/rose-pine/vscode">source</a></figcaption>
+
 </figure>
 
 <br />
 
 <figure>
-<img src="/rose-pine/rp-hyper-moon.jpg" alt="Rosé Pine Moon for Hyper" />
-<figcaption>Rosé Pine Moon for Hyper — <a href="https://github.com/rose-pine/hyper">source</a></figcaption> 
+
+![Rosé Pine Moon for Hyper](../../../public/rose-pine/rp-hyper-moon.jpg)
+
+<figcaption>Rosé Pine Moon for Hyper — <a href="https://github.com/rose-pine/hyper">source</a></figcaption>
+
 </figure>
 
 <br />
 
 <figure>
-<img src="/rose-pine/rp-prism-dawn.jpg" alt="Rosé Pine Dawn for Prism" />
-<figcaption>Rosé Pine Dawn for Prism — <a href="https://github.com/rose-pine/prism">source</a></figcaption> 
+
+![Rosé Pine Dawn for Prism](../../../public/rose-pine/rp-prism-dawn.jpg)
+
+<figcaption>Rosé Pine Dawn for Prism — <a href="https://github.com/rose-pine/prism">source</a></figcaption>
+
 </figure>
 
 <br />
 
 <figure>
-<img src="/rose-pine/rp-chrome-base.jpg" alt="Rosé Pine for Google Chrome" />
-<figcaption>Rosé Pine for Google Chrome — <a href="https://github.com/rose-pine/google-chrome">source</a></figcaption> 
+
+![Rosé Pine Dawn for Google Chrome](../../../public/rose-pine/rp-chrome-base.jpg)
+
+<figcaption>Rosé Pine for Google Chrome — <a href="https://github.com/rose-pine/google-chrome">source</a></figcaption>
+
 </figure>
 
 <br />
 
 <figure>
-<img src="/rose-pine/rp-slack-moon.jpg" alt="Rosé Pine Moon for Slack" />
-<figcaption>Rosé Pine Moon for Slack — <a href="https://github.com/rose-pine/slack">source</a></figcaption> 
+
+![Rosé Pine Moon for Slack](../../../public/rose-pine/rp-slack-moon.jpg)
+
+<figcaption>Rosé Pine Moon for Slack — <a href="https://github.com/rose-pine/slack">source</a></figcaption>
+
 </figure>
