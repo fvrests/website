@@ -3,13 +3,17 @@ title: Lavender
 pubDate: 2020-08-19
 cover:
   src: ~/assets/lavender/cover.jpg
-  alt: Lavender app in a browser window on a dark background with lavender plants, moon and stars
+  alt: Lavender app. Digital time on a pastel purple background reads "10:31 in the evening". Below are the date and weather ("70 / pouring") with a small raincloud icon. The app is atop a dark background with illustrated lavender plants, moon and stars.
 tags: ['projects']
 ---
 
-Lavender is a minimalist Chrome new tab extension born of a need for respite from the distractions inherent to the modern web. Its purpose is to provide a new tab alternative that limits decision fatigue for the user while prioritizing a few simple utilities. As my first solo development project, Lavender has also served as a playground for me to grow my code and project management skills.
+Lavender is a minimalist Chrome new tab extension born of a need for respite from the distractions inherent to the modern web.
 
-This project's design was loosely inspired by [Lagom](http://lagom.io).
+New tab extensions are plentiful in the Chrome ecosystem, but to the protests of my often-restless mind, many I've tried feel like overwhelming conglomerations of links, widgets, search tools, note-taking spaces, and the like.
+
+In 2020, my interactions with these apps launched me into a personal mission to limit my vulnerability to decision fatigue while building a space that prioritizes a few purposeful utilities, and Lavender was born. As my first solo development project, Lavender has also served as a playground for me to grow my code and project management skills.
+
+Lavender's design was loosely inspired by [Lagom](http://lagom.io).
 
 ## Links
 
@@ -27,9 +31,9 @@ This project's design was loosely inspired by [Lagom](http://lagom.io).
 
 ### Self-correcting interval
 
-When building the clock for this extension, I planned to set an interval to update the project's internal clock (and avoid repeatedly calling the JS `Date.now()` method).
+When building the extension, I planned to set an interval to update the project's internal clock (and avoid repeatedly calling the JS `Date.now()` method).
 
-In researching for this task, I learned that the `setInterval()` method has a tendency to repeat slightly more slowly than expected due to latency, resulting in drift and reliability issues when used for clocks. This correcting interval from a [blog post](https://andrewduthie.com/2013/12/31/creating-a-self-correcting-alternative-to-javascripts-setinterval/) by Andrew Duthie was useful to overcome the latency issue and accurately update the project's stored time.
+In search of internet expertise on this topic, I learned that the `setInterval()` method has a tendency to repeat slightly more slowly than expected due to latency, resulting in drift and reliability issues when used for clocks. This correcting interval from a [blog post](https://andrewduthie.com/2013/12/31/creating-a-self-correcting-alternative-to-javascripts-setinterval/) by Andrew Duthie was useful to overcome the latency issue and accurately update the project's stored time.
 
 ```js
 // correcting interval counteracts compounding variation in time between ticks that would occur using setInterval
@@ -64,7 +68,9 @@ export const setCorrectingInterval = (func, delay) => {
 
 ### Options menu: click outside to close
 
-Because Lavender's options menu is a modal that overlays the page, it should be easy to dismiss when needed. This snippet achieves that goal using an overlay element which is above the page, but below the modal, and which closes the modal if the user clicks outside of the component.
+Because Lavender's options menu is a modal that overlays the page, it should be easy to dismiss when needed (or else risk a peril well-known to online recipe-seekers and hopeful researchers -- <i>"Sign up for our newsletter!"</i> <i>"Whoops! You must have a subscription to continue! >:( "</i>)
+
+This snippet achieves that goal using an overlay element which is above the page, but below the modal, and which closes the modal if the user clicks outside of the component. Of course, relevant packages like [v-click-outside](https://www.npmjs.com/package/v-click-outside) are often used to manage this behavior instead, but they can add some complexity and often rely on a nuanced chain of event-passing that I'm still not quite confident I understand. The below solution is concise and will work for most applications as long as it doesn't interfere with other elements layered in the z-direction.
 
 ```html
 <!-- overlay -->
@@ -93,7 +99,8 @@ function toggleOptionsMenu() {
 	left: 0;
 	right: 0;
 	background-color: transparent;
-	/* z-index must be higher than the rest of the content on the page, so that clicking anywhere outside the modal will activate the function, and lower than the modal to prevent interference. I used 9, since my menu is at z=10 and the rest of my page content is at z=0 */
+	/* stack level must be above all other content but below the modal, so that clicking anywhere outside the modal will target overlay and call the function. */
+	/* since other content is automatically stacked at 0 and we placed the options-menu modal at 10, an index of 9 will place the overlay between them to create the desired behavior.*/
 	z-index: 9;
 }
 ```

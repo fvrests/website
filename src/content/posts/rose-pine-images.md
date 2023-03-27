@@ -3,13 +3,13 @@ title: Rosé Pine Images
 pubDate: 2021-02-01
 cover:
   src: ~/assets/rose-pine-images/cover.jpg
-  alt: Screenshot of Rosé Pine images website in a browser window
+  alt: Rosé Pine Images website against a botanical background. The site has inputs for 'theme' and 'app name' and below, an illustration reads 'Rosé Pine / YOUR APP' with colorful plants, a crescent moon and stars.
 tags: ['projects', 'rose-pine']
 ---
 
-Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool from Vercel's [Open Graph Image as a Service](https://github.com/vercel/og-image) in an effort to help foster a common design language among Rosé Pine's diverse projects and ease the process of implementing new themes for creators.
+Rosé Pine Images is a simple social media preview generator for [Rosé Pine](https://rosepinetheme.com). I adapted this tool for Rosé Pine from Vercel's [Open Graph Image as a Service](https://github.com/vercel/og-image) to help foster a common design language among theme projects and ease the process of contribution for creators. It's also a sneaky way to plant copies of my novice illustrations across GitHub in preparation for artistic world-domination (don't tell anyone).
 
-For me, this project was an exercise in adapting a pre-existing codebase to fit a new use case, reading unfamiliar code, and adding my own customizations without compromising existing functionality.
+This project was a technical exercise in reading unfamiliar code, adding features without compromising existing functionality, and generally co-opting an upstanding project for my own diabolical plans.
 
 ## Links
 
@@ -19,7 +19,7 @@ For me, this project was an exercise in adapting a pre-existing codebase to fit 
 ## Utilities
 
 - Site hosted with [Vercel](https://vercel.com/)
-- Spinners from Tobias Ahlin's [Spinkit](https://tobiasahlin.com/spinkit/)
+- UI Spinners from Tobias Ahlin's [Spinkit](https://tobiasahlin.com/spinkit/)
 
 ## Templates
 
@@ -27,19 +27,19 @@ Customization options include a selection of three basic themes, as well as an i
 
 ### Rosé Pine
 
-<img src="/rose-pine-images/rpi-preview-base.jpg" alt="Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background." width="350"/>
+<img src="/rose-pine-images/rpi-preview-base.jpg" alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background." width="350"/>
 
 ### Rosé Pine Moon
 
-<img src="/rose-pine-images/rpi-preview-moon.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, bright yellow, salmon and lavender colored ZZ plants, monstera and succulents atop a dark indigo, starry background with a crescent moon." width="350"/>
+<img src="/rose-pine-images/rpi-preview-moon.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, yellow, salmon and lavender colored ZZ plants, monstera and succulents atop a dark indigo, starry background with a crescent moon." width="350"/>
 
 ### Rosé Pine Dawn
 
-<img src="/rose-pine-images/rpi-preview-dawn.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP'. The text is surrounded by blue-green, golden yellow, salmon and lavender colored ZZ plants, monstera and succulents atop a warm oat colored background with a pale yellow sun." width="350"/>
+<img src="/rose-pine-images/rpi-preview-dawn.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by dark pine-green, yellow, salmon and seafoam colored ZZ plants, monstera and succulents atop a warm oat colored background with a pale yellow sun." width="350"/>
 
 ## Snippets
 
-Because the image preview in this project takes a moment to generate, I wanted to add some sort of animation in its place to signal a loading state and visually fill the space where the image would appear. I had come across [Spinkit](https://tobiasahlin.com/spinkit/) and knew one of the lightweight, monochromatic spinners would be perfect for the site.
+Because the image preview in this project takes a moment to generate, I wanted to add an animation in its place to signal a loading state and visually fill the space where the image would appear. I had come across [Spinkit](https://tobiasahlin.com/spinkit/) and after overcoming the inevitable entrancement caused by gently floating shapes, I decided to try adding it to my site for that extra dosage of hypnotic <i lang="fr">je ne sais quoi</i>.
 
 The code below shows the demonstrated implementation from Spinkit, which looked simple to add to a typical codebase.
 
@@ -51,7 +51,7 @@ The code below shows the demonstrated implementation from Spinkit, which looked 
 </div>
 ```
 
-Unfortunately, I think you can predict that it turned out not to be so simple. I realized that in my case, the component would need to be rendered in the `frontend input` section of the site, which is imported through a `script` tag and mostly composed of code that looks like this:
+Reader, I think you can predict that it turned out not to be so simple. In my case, the component would need to be rendered in the unfamiliar (to me) html-disguised-as-typescript syntax used to specify the site frontend, which is mostly composed of code like this:
 
 ```ts
 return H(
@@ -76,7 +76,7 @@ return H(
 );
 ```
 
-Despite feeling unfamiliar with (and slightly disturbed by) the syntax of the file, I was able to piece together what I knew about HTML and the lower level semantics above to produce this section, which creates the desired element.
+Despite feeling unfamiliar with (and slightly disturbed by) the syntax of the file, I realized that each instance of `H()` seemed to define a nestable element with the specified HTML tag, and allowed details such as `className` to be passed from within an object. According to this model, I produced the below fragment which, while somewhat abominable, creates the desired element.
 
 ```ts
 H(
@@ -94,4 +94,4 @@ H(
 
 All that was left was to add the provided styles to the public `style.css` file and ensure that they targeted the `className` values I assigned, and the rest worked as intended.
 
-While this code block looks different than the example found in Spinkit's source code, writing it turned out to be a reasonable task once I understood how the surrounding structure was analogous to HTML I'd seen before. This experience taught me to search for clues in the hierarchy, language & layout of code, even when the syntax I might have written myself doesn't seem apparent.
+Even though this excerpt definitely looks different than the example Spinkit provided, writing it turned out to be a reasonable undertaking once I understood how the structure of Vercel's frontend was analogous to garden-variety HTML. This experience taught me to hunt for clues in the hierarchy, language & layout of code, even when faced with the incomprehensible mysteries of wild-caught markup.
