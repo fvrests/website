@@ -21,7 +21,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 ## Contributions
 
 - Co-authored the first Rosé Pine theme, [Rosé Pine for VSCode](https://github.com/rose-pine/vscode)
-- Designed & implemented the [Dawn variant](https://rosepinetheme.com/palette#dawn-swatches) for bright conditions
+- Designed & implemented the [Dawn variant](https://rosepinetheme.com/palette/ingredients#dawn-ingredients) for bright conditions
 - Contributed themes for [Hyper](https://github.com/rose-pine/hyper), [Prism](https://github.com/rose-pine/prism), [Google Chrome](https://github.com/rose-pine/google-chrome) & [Slack](https://github.com/rose-pine/slack)
 - Development and maintenance of [Rosé Pine Images](/projects/rose-pine-images), a social image generator for project repositories
 - Ongoing work in asset, color, & organizational design
