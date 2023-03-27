@@ -7,25 +7,24 @@ cover:
 tags: ['projects', 'rose-pine']
 ---
 
-Rosé Pine is a theme project with support for over 70 platforms. I work alongside [@mvllow](https://mellow.dev) and a growing community of contributors to maintain themes and documentation for the organization.
+Rosé Pine is a theme project with support for over 100 platforms. I tinker when I'm able amongst wiser and braver souls -- [@mvllow](https://mellow.dev) and a growing community of contributors -- to maintain themes and documentation for the organization.
 
-Rosé Pine aims to provide a calming, soft palette which can be adapted for various applications and which reduces eyestrain in varying light conditions, with loose design inspiration from [Solarized](https://ethanschoonover.com/solarized/) and other light-accommodative themes.
+In the context of the web theming space, Rosé Pine's palette tends toward calming and moody colors, with an adaptible nature well-suited to varying applications. Its three variants reduce eyestrain in diverse light conditions, with loose design inspiration from [Solarized](https://ethanschoonover.com/solarized/) and other light-accommodative themes.
 
-The project is also intended as an encouraging space for contributors to learn about code & theme building, and is open-source to serve as a resource to the community.
+Owing to the caring and generous efforts of a growing open-source community, Rosé Pine has become an encouraging medium through which contributors can learn about code & theme building.
 
 ## Links
 
-[Theme website](https://rosepinetheme.com)
-
-[GitHub](https://github.com/rose-pine/rose-pine-theme)
+- [Theme website](https://rosepinetheme.com)
+- [GitHub](https://github.com/rose-pine/rose-pine-theme)
 
 ## Contributions
 
-- Co-wrote [Rosé Pine for VSCode](https://github.com/rose-pine/vscode)
-- Designed & built [Dawn variant](https://rosepinetheme.com/palette#dawn-swatches) for bright conditions
+- Co-authored the first Rosé Pine theme, [Rosé Pine for VSCode](https://github.com/rose-pine/vscode)
+- Designed & implemented the [Dawn variant](https://rosepinetheme.com/palette#dawn-swatches) for bright conditions
 - Contributed themes for [Hyper](https://github.com/rose-pine/hyper), [Prism](https://github.com/rose-pine/prism), [Google Chrome](https://github.com/rose-pine/google-chrome) & [Slack](https://github.com/rose-pine/slack)
-- Created [Rosé Pine Images](/projects/rose-pine-images), a social image generator for project repositories
-- Ongoing contributions to asset, color, & organizational design
+- Development and maintenance of [Rosé Pine Images](/projects/rose-pine-images), a social image generator for project repositories
+- Ongoing work in asset, color, & organizational design
 
 ## Gallery
 
