@@ -14,6 +14,7 @@ export async function get(context) {
 	const baseUrl = import.meta.env.DEV
 		? 'http://localhost:3000'
 		: context.site.origin;
+	console.log('test context', context.site);
 	const parse = (data) =>
 		unified()
 			.use(remarkParse)
@@ -31,7 +32,7 @@ export async function get(context) {
 		title: 'fvrests',
 		description: 'notes from fvrests',
 		// info: https://docs.astro.build/en/reference/api-reference/#contextsite
-		site: context.site,
+		site: baseUrl,
 		items: posts.map((post) => ({
 			...post.data,
 			title: post.data.title,
