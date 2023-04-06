@@ -11,21 +11,22 @@ import rehypeStringify from 'rehype-stringify';
 
 // info: https://docs.astro.build/en/guides/rss/
 export async function get(context) {
+	const baseUrl = import.meta.env.DEV
+		? 'http://localhost:3000'
+		: context.site.origin;
 	const parse = (data) =>
 		unified()
 			.use(remarkParse)
 			.use(remarkRehype, { allowDangerousHtml: true })
 			.use(rehypeRaw)
 			.use(rehypeUrls, (url) => {
-				const baseUrl = import.meta.env.DEV
-					? 'http://localhost:3000'
-					: context.site.origin;
 				return url.href.startsWith('/') ? baseUrl + url.href : url.href;
 			})
 			.use(rehypeStringify)
 			.processSync(data);
 
 	const posts = await getCollection('posts');
+	console.log('test', posts[0].data.cover.src);
 	return rss({
 		title: 'fvrests',
 		description: 'notes from fvrests',
@@ -36,7 +37,12 @@ export async function get(context) {
 			title: post.data.title,
 			pubDate: post.data.pubDate,
 			link: `/notes/${post.slug}/`,
-			content: String(parse(post.body)),
+			content: String(
+				`<img src="${post.data.cover.src.src.replace('/src', baseUrl)}" alt="${
+					post.data.cover.alt
+				}"/>\n${parse(post.body)}`
+			),
 		})),
+		customData: `<image><url>${baseUrl}/favicon-lg.png</url><title>fvrests logo: a simple tree icon formed by light lines on a dark background</title><link>${baseUrl}</link></image>`,
 	});
 }
