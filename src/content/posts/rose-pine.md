@@ -32,7 +32,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 
 <figure>
 
-![Rosé Pine for Visual Studio Code](/rose-pine/rp-vscode-base.jpg)
+![Rosé Pine for Visual Studio Code](../../assets/rose-pine/rp-vscode-base.jpg)
 
 <figcaption>Rosé Pine for Visual Studio Code — <a href="https://github.com/rose-pine/vscode">source</a></figcaption>
 
@@ -42,7 +42,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 
 <figure>
 
-![Rosé Pine Moon for Hyper](/rose-pine/rp-hyper-moon.jpg)
+![Rosé Pine Moon for Hyper](../../assets/rose-pine/rp-hyper-moon.jpg)
 
 <figcaption>Rosé Pine Moon for Hyper — <a href="https://github.com/rose-pine/hyper">source</a></figcaption>
 
@@ -52,7 +52,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 
 <figure>
 
-![Rosé Pine Dawn for Prism](/rose-pine/rp-prism-dawn.jpg)
+![Rosé Pine Dawn for Prism](../../assets/rose-pine/rp-prism-dawn.jpg)
 
 <figcaption>Rosé Pine Dawn for Prism — <a href="https://github.com/rose-pine/prism">source</a></figcaption>
 
@@ -62,7 +62,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 
 <figure>
 
-![Rosé Pine Dawn for Google Chrome](/rose-pine/rp-chrome-base.jpg)
+![Rosé Pine Dawn for Google Chrome](../../assets/rose-pine/rp-chrome-base.jpg)
 
 <figcaption>Rosé Pine for Google Chrome — <a href="https://github.com/rose-pine/google-chrome">source</a></figcaption>
 
@@ -72,7 +72,7 @@ Owing to the caring and generous efforts of a growing open-source community, Ros
 
 <figure>
 
-![Rosé Pine Moon for Slack](/rose-pine/rp-slack-moon.jpg)
+![Rosé Pine Moon for Slack](../../assets/rose-pine/rp-slack-moon.jpg)
 
 <figcaption>Rosé Pine Moon for Slack — <a href="https://github.com/rose-pine/slack">source</a></figcaption>
 
