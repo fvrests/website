@@ -27,15 +27,15 @@ Customization options include a selection of three basic themes, as well as an i
 
 ### Rosé Pine
 
-<img src="/rose-pine-images/rpi-preview-base.jpg" alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background." width="350"/>
+![Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, pale pink and eggshell colored ZZ plants, monstera and succulents atop a dark indigo background.](../../assets/rose-pine-images/rpi-preview-base.jpg)
 
 ### Rosé Pine Moon
 
-<img src="/rose-pine-images/rpi-preview-moon.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, yellow, salmon and lavender colored ZZ plants, monstera and succulents atop a dark indigo, starry background with a crescent moon." width="350"/>
+![Social banner reading 'Rosé Pine / YOUR APP', illustrated by pine-green, yellow, salmon and lavender colored ZZ plants, monstera and succulents atop a dark indigo, starry background with a crescent moon.](../../assets/rose-pine-images/rpi-preview-moon.jpg)
 
 ### Rosé Pine Dawn
 
-<img src="/rose-pine-images/rpi-preview-dawn.jpg"  alt="Social banner reading 'Rosé Pine / YOUR APP', illustrated by dark pine-green, yellow, salmon and seafoam colored ZZ plants, monstera and succulents atop a warm oat colored background with a pale yellow sun." width="350"/>
+![Social banner reading 'Rosé Pine / YOUR APP', illustrated by dark pine-green, yellow, salmon and seafoam colored ZZ plants, monstera and succulents atop a warm oat colored background with a pale yellow sun.](../../assets/rose-pine-images/rpi-preview-dawn.jpg)
 
 ## Snippets
 
