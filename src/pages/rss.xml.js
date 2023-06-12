@@ -14,7 +14,6 @@ export async function get(context) {
 	const baseUrl = import.meta.env.DEV
 		? 'http://localhost:3000'
 		: context.site.origin;
-	console.log('test context', context.site);
 	const parse = (data) =>
 		unified()
 			.use(remarkParse)
@@ -27,7 +26,6 @@ export async function get(context) {
 			.processSync(data);
 
 	const posts = await getCollection('posts');
-	console.log('test', posts[0].data.cover.src);
 	return rss({
 		title: 'fvrests',
 		description: 'notes from fvrests',

@@ -68,9 +68,9 @@ function getLastModified(filename: string) {
 			cover && cover.src && (
 				<>
 					<div class="h-lg" />
-					<div class="flex max-h-[600px] w-full items-center justify-center overflow-hidden rounded-xl">
+					<div class="flex max-h-[600px] max-w-full items-center overflow-hidden rounded-xl">
 						<Image
-							class="h-auto w-full rounded-xl"
+							class="h-auto max-w-full rounded-xl"
 							src={cover.src}
 							alt={cover.alt}
 						/>
