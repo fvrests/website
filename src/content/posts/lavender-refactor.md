@@ -30,7 +30,7 @@ Lavender was originally released in 2020 as a Chrome extension, and was met with
 
 - Finally, the biggest skeleton of all -- imagine, if you will, that the other issues were your average small house skeletons. In comparison, this issue was the giant Home Depot lawn skeleton of misconfigured code:
 
-  <img src="/src/assets/lavender-refactor/skeleton.jpeg" alt="Photo of a giant 12-ft tall lawn skeleton decoration dressed as a pirate, holding a large flagpole flying the Jolly Roger. Smaller skeletons positioned around him appear to pull at strings tied to his arms, guiding him like a marionette to some nefarious end." width="50%" style="margin: 0 auto;"></img>
+  ![Photo of a giant 12-ft tall lawn skeleton decoration dressed as a pirate, holding a large flagpole flying the Jolly Roger. Smaller skeletons positioned around him appear to pull at strings tied to his arms, guiding him like a marionette to some nefarious end.](../../assets/lavender-refactor/skeleton.jpeg)
 
   Lavender's weather API key was periodically blocked due to excessive requests. The first time this happened, I burst into a cold sweat, fearing the worst for my little app. Then I checked the API dashboard - after a brief lock-out from the API service, my key was reinstated. The weather gods smiling upon me, the app would function as normal for weeks to months before the key was blocked again. Speaking of weather gods, the folks at [OpenWeatherMap.org](https://openweathermap.org) earn that well-deserved title for building their rate-limiting in a charitably user-friendly manner, in contrast with some other [rather brazen](https://wheresbaldo.dev/tech/netlify/is-hosting-on-netlify-going-to-bankrupt-you) usage limit policies we're accustomed to from other freemium web services.
 
@@ -193,7 +193,7 @@ export const useDataStore = defineStore('data', {
 					this.messageAllInstances({
 						weather: { fetching: false },
 					});
-				}
+				},
 			);
 		},
 	},
