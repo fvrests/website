@@ -1,6 +1,7 @@
 ---
 title: Bookshelf — How to Do Nothing
-pubDate: 2023-06-12
+pubDate: 2023-06-12T15:32:00-05:00
+modDate: 2023-06-12T15:32:00-05:00
 cover:
   src: ~/assets/how-to-do-nothing/cover.png
   alt: How to Do Nothing book cover - title in white text on dark green foliage and pink and white clustered flowers. The tagline reads 'Resisting the Attention Economy'.

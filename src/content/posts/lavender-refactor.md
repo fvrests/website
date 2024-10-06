@@ -1,6 +1,7 @@
 ---
 title: Lavender (refactor)
-pubDate: 2024-09-06
+pubDate: 2024-09-06T10:19:00-05:00
+modDate: 2024-09-27T11:07:00-05:00
 cover:
   src: ~/assets/lavender-refactor/cover.png
   alt: Lavender app. Stylized digital time within a thin rectangle border reads "03:41 in the afternoon". Below are the date and weather ("86 degrees / cloudy") with a small cloud and wind icon. The app is atop a dark background with illustrated constellations and mountain ranges in the distance.

@@ -1,6 +1,7 @@
 ---
 title: Rosé Pine Images
-pubDate: 2021-02-01
+pubDate: 2021-02-01T12:00:00-05:00
+modDate: 2023-04-08T13:40:00-05:00
 cover:
   src: ~/assets/rose-pine-images/cover.jpg
   alt: Rosé Pine Images website against a botanical background. The site has inputs for 'theme' and 'app name' and below, an illustration reads 'Rosé Pine / YOUR APP' with colorful plants, a crescent moon and stars.
@@ -70,9 +71,9 @@ return H(
 						setLoadingState({ theme: val });
 					},
 				}),
-			})
-		)
-	)
+			}),
+		),
+	),
 );
 ```
 
@@ -87,8 +88,8 @@ H(
 		{ className: 'spinner' },
 		H('div', { className: 'bounce1' }),
 		H('div', { className: 'bounce2' }),
-		H('div', { className: 'bounce3' })
-	)
+		H('div', { className: 'bounce3' }),
+	),
 );
 ```
 

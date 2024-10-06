@@ -1,6 +1,7 @@
 ---
 title: Washi tape
-pubDate: 2023-04-03
+pubDate: 2023-04-05T21:45:00-05:00
+modDate: 2023-04-05T21:45:00-05:00
 cover:
   src: ~/assets/washi-tape/washi-tape.jpeg
   alt: A creamy off-white paint color sample card reading 'Light Nougat // M260-2u'. Broad horizontal stripes on its surface are formed by washi tape printed with Van Gogh's "Patch of Grass" impressionist painting -- vibrant green, blue and pale pink upward brushstrokes with yellow flowers dotted throughout.

@@ -33,10 +33,9 @@ if (!max) max = posts.length + 1;
 			posts.slice(0, max).map((post) => (
 				<li class="mb-1 grid max-w-fit">
 					<Link href={`/notes/${post.slug}`}>
-						<div class="flex items-end gap-12">
-							<span class="font-mono text-f-low">
+						<div class="flex items-start gap-12">
+							<span class="text-nowrap font-mono text-f-low">
 								{post.data.pubDate.toLocaleDateString(undefined, {
-									timeZone: 'UTC',
 									month: 'short',
 									year: 'numeric',
 								})}
