@@ -15,6 +15,7 @@ type Props = {
 const { title, pubDate, modDate, description, cover, tags } =
 	Astro.props.frontmatter;
 const { slug } = Astro.params;
+console.log({ modDate, pubDate });
 
 function formatDate(date: Date) {
 	return date.toLocaleString(undefined, {
@@ -23,6 +24,9 @@ function formatDate(date: Date) {
 		year: 'numeric',
 	});
 }
+
+let formattedPubDate = formatDate(pubDate);
+let formattedModDate = formatDate(modDate);
 ---
 
 <Layout {title} {description}>
@@ -36,11 +40,13 @@ function formatDate(date: Date) {
 			</p>
 
 			<div class="flex flex-wrap items-center gap-1.5">
-				<p class="tabular-nums text-f-high">{formatDate(pubDate)}</p>
+				<p class="tabular-nums text-f-high">{formattedPubDate}</p>
 
-				<p class="tabular-nums">
-					(modified {formatDate(modDate)})
-				</p>
+				{
+					formattedModDate !== formattedPubDate && (
+						<p class="tabular-nums">(modified {formattedModDate})</p>
+					)
+				}
 			</div>
 		</div>
 
