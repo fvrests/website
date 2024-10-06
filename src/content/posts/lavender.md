@@ -1,6 +1,7 @@
 ---
 title: Lavender
-pubDate: 2020-08-19
+pubDate: 2020-08-19T12:00:00-05:00
+modDate: 2023-03-27T14:18:00-05:00
 cover:
   src: ~/assets/lavender/cover.jpg
   alt: Lavender app. Digital time on a pastel purple background reads "10:31 in the evening". Below are the date and weather ("70 / pouring") with a small raincloud icon. The app is atop a dark background with illustrated lavender plants, moon and stars.

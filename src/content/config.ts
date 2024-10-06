@@ -10,6 +10,7 @@ const postCollection = defineCollection({
 			title: z.string(),
 			description: z.string().optional(),
 			pubDate: z.date().transform((val) => new Date(val)),
+			modDate: z.date().transform((val) => new Date(val)),
 			tags: z.array(z.string()),
 			cover: z
 				.object({

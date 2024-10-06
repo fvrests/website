@@ -7,14 +7,13 @@ import Heading from '~/components/text/heading.astro';
 import { Image } from 'astro:assets';
 import type { Post } from '~/content/config';
 // info: https://docs.astro.build/en/guides/imports/#node-builtins
-import fs from 'node:fs';
-import process from 'node:process';
 
 type Props = {
 	frontmatter: Post;
 };
 
-const { title, pubDate, description, cover, tags } = Astro.props.frontmatter;
+const { title, pubDate, modDate, description, cover, tags } =
+	Astro.props.frontmatter;
 const { slug } = Astro.params;
 
 function formatDate(date: Date) {
@@ -23,12 +22,6 @@ function formatDate(date: Date) {
 		day: 'numeric',
 		year: 'numeric',
 	});
-}
-
-function getLastModified(filename: string) {
-	const stat = fs.statSync(`${process.cwd()}/src/content/posts/${filename}.md`);
-	const { mtime: modified } = stat;
-	return modified;
 }
 ---
 
@@ -46,7 +39,7 @@ function getLastModified(filename: string) {
 				<p class="tabular-nums text-f-high">{formatDate(pubDate)}</p>
 
 				<p class="tabular-nums">
-					(modified {formatDate(getLastModified(slug))})
+					(modified {formatDate(modDate)})
 				</p>
 			</div>
 		</div>
